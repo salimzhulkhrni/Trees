@@ -78,7 +78,8 @@ public class BST_Inorder_Successor {
              Ans:  Inorder-sucessor = smallest "greater" element. And where the greater elements are found? They are in the right-subtree. So this is how, the below two cases come from:
                    i) if there is a right-subtree, then we can find the in-order successor(smallest "greater" element) here.
                    ii) If there is no right-subtree, then in-order successor can lie on the left(also in the root).
-                       And what determines that? See below:
+                       
+                    And how is the logic determined ? See below:
     
                 i) "If the node has a right-subtree", then in-order successor will be the smallest(left-most) element in the right subtree
                     Why?  because all elements in its right-subtree will be greater than the element-'p' ( whose in-order successor needs to be found). 
