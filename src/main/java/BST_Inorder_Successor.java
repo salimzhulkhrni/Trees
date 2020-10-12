@@ -112,7 +112,7 @@ public class BST_Inorder_Successor {
                       In the above example, we took most-recent left path from 7, which is the in-order successor for 5
     
                       But why only the 'most-recent left-path'?
-                          Because when an element appears(follows) on the left(left-opath), means that element is smaller than the root(from where we took a left). So this root becomes one of the candidates for in-order successor
+                          Because when an element appears(follows) on the left(left-path), means that element is smaller than the root(from where we took a left). So this root becomes one of the candidates for in-order successor
     
                       Implying: If it appears on the left-side & right side, following left & right path alternaely, in that case, "immediate(most-recent root) from where we took the most-recent left-path will be the in-order succesor"
                         
