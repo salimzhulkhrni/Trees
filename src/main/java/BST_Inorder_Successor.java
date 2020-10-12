@@ -74,14 +74,17 @@ public class BST_Inorder_Successor {
              Time: O(N) | Space: O(N)
     Logic 2:
              Think about it. In a BST, elements to the left are smaller than root & elements to the right are greater than the root. So, where can the in-order successor lie? (smallest element greater than the current element)
-             
-             Ans: In-order successor can lie either on the right or on the left(also in the root). And what determines that? See below:
+             Why go for first checking in the right-subtree?
+             Ans:  Inorder-sucessor = smallest "greater" element. And where the greater elements are found? They are in the right-subtree. So this is how, the below two cases come from:
+                   i) if there is a right-subtree, then we can find the in-order successor(smallest "greater" element) here.
+                   ii) If there is no right-subtree, then in-order successor can lie on the left(also in the root).
+                       And what determines that? See below:
     
-                i) If the node has a right-subtree, then in-order successor will be the smallest(left-most) element in the right subtree
+                i) "If the node has a right-subtree", then in-order successor will be the smallest(left-most) element in the right subtree
                     Why?  because all elements in its right-subtree will be greater than the element-'p' ( whose in-order successor needs to be found). 
                           So, out of those greater elements in the right, the smallest greater element(whose in-order successor needs to be found ) will lie in the "left-most node of the right-subtree"
     
-                ii) If the node does not have a right-subtree, then the in-order successor will be most-recent node(ancestor) from where we took a most-recent left-path.
+                ii) "If the node does not have a right-subtree", then the in-order successor will be most-recent node(ancestor) from where we took a most-recent left-path.
                     Why? Consider the below tree
                                7
                               / \
